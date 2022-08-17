@@ -96,20 +96,23 @@ Route::screen('roles', RoleListScreen::class)
             ->push(__('Roles'), route('platform.systems.roles'));
     });
 
-// Example...
-Route::screen('example', ExampleScreen::class)
-    ->name('platform.example')
+// Platform > System > Sites > List
+Route::screen('sites', \App\Orchid\Screens\Site\SiteListScreen::class)
+    ->name('platform.systems.sites')
     ->breadcrumbs(function (Trail $trail) {
         return $trail
             ->parent('platform.index')
-            ->push('Example screen');
+            ->push(__('Users'), route('platform.systems.sites'));
     });
 
-Route::screen('example-fields', ExampleFieldsScreen::class)->name('platform.example.fields');
-Route::screen('example-layouts', ExampleLayoutsScreen::class)->name('platform.example.layouts');
-Route::screen('example-charts', ExampleChartsScreen::class)->name('platform.example.charts');
-Route::screen('example-editors', ExampleTextEditorsScreen::class)->name('platform.example.editors');
-Route::screen('example-cards', ExampleCardsScreen::class)->name('platform.example.cards');
-Route::screen('example-advanced', ExampleFieldsAdvancedScreen::class)->name('platform.example.advanced');
+// Platform > System > Sites > Create
+Route::screen('sites/create', \App\Orchid\Screens\Site\SiteEditScreen::class)
+    ->name('platform.systems.sites.create')
+    ->breadcrumbs(function (Trail $trail) {
+        return $trail
+            ->parent('platform.systems.sites')
+            ->push(__('Create'), route('platform.systems.sites.create'));
+    });
+
 
 //Route::screen('idea', Idea::class, 'platform.screens.idea');

@@ -5,12 +5,15 @@
     "keywords": ["framework", "laravel"],
     "license": "MIT",
     "require": {
-        "php": "^8.0.2",
+        "php": "^8.1.4",
         "guzzlehttp/guzzle": "^7.2",
         "laravel/framework": "^9.19",
         "laravel/sanctum": "^3.0",
         "laravel/tinker": "^2.7",
-        "orchid/platform": "^13.1"
+        "orchid/platform": "^13.1",
+        "spatie/crawler": "^7.1",
+        "uocnv/laravel-model-expires": "dev-main",
+        "uocnv/spatie-crawler-toolkit-for-laravel": "dev-master"
     },
     "require-dev": {
         "fakerphp/faker": "^1.9.1",
